@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: express-api
+    env: node
+    plan: free  # Change to 'starter' or 'pro' if needed
+    buildCommand: npm install
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_JLPA5j1kOzKu@ep-lingering-boat-a8uq0fsh-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
+      - key: UPSTASH_REDIS_REST_URL
+        value: https://fast-earwig-40338.upstash.io
+      - key: UPSTASH_REDIS_REST_TOKEN
+        value: AZ2SAAIjcDFiMTBiZGRlYjRiZTY0MjE3ODI3NmM5NDA1MWUwNDM2YnAxMA
